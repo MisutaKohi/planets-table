@@ -22,6 +22,7 @@
 
     th {
       background-color: var(--header-gray);
+      padding: 10px;
     }
 
     tr:nth-child(odd) {
@@ -35,14 +36,26 @@
     th, td {
       font-size: 20px;
       border: 1px solid gray;
+      text-align: center;
+    }
+
+    td {
+      height: 45px;
+      padding: 5px;
     }
 
     .normal-width {
-      width: 200px;
+      width: 130px;
+      word-wrap: break-word;
+      border: 1px solid purple;
     }
 
     .extra-wide {
+      width: 235px;
+    }
 
+    .black-border {
+      border: 3px solid black;
     }
 
   </style>
@@ -50,7 +63,7 @@
 <body>
   <h1>Planets data</h1>
   <table>
-    <caption>
+    <caption style="font-size: large; padding: 10px;">
       Data about the planets of our solar system (Planetary facts taken from 
       <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">
         Nasa's Planetary Fact Sheet - Metric
@@ -59,7 +72,7 @@
     <colgroup>
       <col />
       <col />
-      <col style="border: 3px black solid;" />
+      <col class="normal-width black-border" />
       <col class="normal-width" />
       <col class="normal-width" />
       <col class="normal-width" />
@@ -68,17 +81,18 @@
       <col class="normal-width" />
       <col class="normal-width" />
       <col class="normal-width" />
+      <col class="extra-wide" />
     </colgroup>
     <tr>
-      <th colspan="2"></th>
+      <th colspan="2" style="background-color: var(--row-gray);"></th>
       <th col>Name</th>
-      <th>Mass (10^24 kg)</th>
-      <th>Diameter (km)</th>
-      <th>Density (kg/m^3)</th>
-      <th>Gravity (m/s^2)</th>
-      <th>Length of day (hours)</th>
-      <th>Distance from Sun (10^6 km)</th>
-      <th>Mean temperature (^C)</th>
+      <th>Mass <br>(10^24 kg)</br></th>
+      <th>Diameter <br>(km)</br></th>
+      <th>Density <br>(kg/m^3)</br></th>
+      <th>Gravity <br>(m/s^2)</br></th>
+      <th>Length <br>of day</br> (hours)</th>
+      <th>Distance from Sun <br>(10^6 km)</br></th>
+      <th>Mean temperature <br>(^C)</br></th>
       <th>Number of moons</th>
       <th>Notes</th>
     </tr>
@@ -193,7 +207,7 @@
       <td>5906.4</td>
       <td>-225</td>
       <td>5</td>
-      <td>Declassified as a planet in 2006, but this <a href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">remains controversial</a>.</td>
+      <td style="padding: 10px;">Declassified as a planet in 2006, but this <a href="https://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">remains controversial</a>.</td>
     </tr>
   </table>
 </body>
