@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root{
+      --header-gray: rgb(235, 235, 235);
+      --row-gray: rgb(245, 245, 245);
+      --row-white: rgb(250, 250, 250);
+      font-family: sans-serif;
+    }
+
+    h1 {
+      font-size: 44px;
+    }
+
+    th {
+      background-color: var(--header-gray);
+    }
+
+    tr:nth-child(odd) {
+      background-color: var(--row-gray);
+    }
+
+    tr:nth-child(even) {
+      background-color: var(--row-white);
+    }
+
+    th, td {
+      font-size: 20px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <h1>Planets data</h1>
+  <table>
+    <caption>Data about the planets of our solar system (Planetary facts taken from Nasa's Planetary Fact Sheet - Metric).</caption>
+    <colgroup>
+      <col />
+      <col style="border: 3px black solid;" />
+    </colgroup>
+    <tr>
+      <th>empty</th>
+      <th>Name</th>
+      <th>Mass (10^24 kg)</th>
+      <th>Diameter (km)</th>
+      <th>Density (kg/m^3)</th>
+      <th>Gravity (m/s^2)</th>
+      <th>Length of day (hours)</th>
+      <th>Distance from Sun (10^6 km)</th>
+      <th>Mean temperature (^C)</th>
+      <th>Number of moons</th>
+      <th>Notes</th>
+    </tr>
+  </table>
+</body>
+</html>
